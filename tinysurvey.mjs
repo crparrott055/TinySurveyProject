@@ -2,18 +2,26 @@ import express from 'express';
 
 const app = express();
 
+const port = 8080;
+
+app.set('view-engine', 'ejs');
+
 app.get('/index.html', (request, response) => {
-  response.send('Hello from Cloud Application Development');
+  response.render('index.ejs');
 })
 
-app.get('/extra.html', (request, response) => {
-    response.send('Hello from Extra');
-  })
-  
-app.get('/csc227.html', (request, response) => {
-    response.send('Hello from CSC 227');
+app.get('/enteroptions.html', (request, response) => {
+  response.render('enteroptions.ejs');
 })
 
-app.listen(3000, () => {
-  console.log("Express Server Running");
+app.get('/selectoption.html', (request, response) => {
+  response.render('selectoption.ejs');
+})
+
+app.get('/displayresults.html', (request, response) => {
+  response.render('displayresults.ejs');
+})
+
+app.listen(port, () => {
+  console.log("Server running");
 })
