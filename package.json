@@ -1,0 +1,14 @@
+{
+  "name": "tinysurveyproject",
+  "version": "1.0.0",
+  "description": "A tiny survey application",
+  "main": "tinysurvey.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Caitlin Parrott",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
